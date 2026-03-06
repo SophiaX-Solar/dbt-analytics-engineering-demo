@@ -1354,3 +1354,91 @@ describe table "RAW"."JAFFLE_SHOP"."ORDERS"
 21:34:59.263695 [error]: Failed to send log message via LSP: ServiceStopped
 21:34:59.263702 [warn ]: Failed to send compile start notification: ServiceStopped
 21:34:59.263713 [error]: Failed to send log message via LSP: ServiceStopped
+==================== 2026-03-06T12:31:46.610635Z | a623255b-7b99-4499-83cc-4c055582e554 ====================
+12:31:46.610885 [info ]: Starting dbt LSP server
+12:31:46.611036 [info ]: Connecting to LSP client on port 8000
+12:31:46.611445 [info ]: Successfully connected to LSP client
+12:31:46.611450 [info ]: Creating LSP service...
+12:31:46.676381 [info ]: Creating LSP server...
+12:31:46.676409 [info ]: Starting LSP server...
+12:31:46.705705 [info ]: Started loading project
+12:31:46.709300 [info ]: Loading ~/.dbt/profiles.yml
+12:31:46.863877 [debug]:    Started loading packages
+12:31:46.867554 [debug]:     Loaded [  0.00s] packages
+12:31:46.868859 [info ]: Started parsing
+12:31:46.885739 [info ]: Finished loading project [  0.18s]
+12:31:46.888166 [debug]: Finished parsing models/staging/jaffle_shop/_src_jaffle_shop.yml [  0.00s]
+12:31:46.888346 [debug]: Finished parsing models/staging/jaffle_shop/_stg_jaffle_shop.yml [  0.00s]
+12:31:46.892060 [debug]: Finished parsing models/marts/finance/fct_orders.sql [  0.00s]
+12:31:46.892332 [debug]: Finished parsing models/marts/marketing/dim_customers.sql [  0.00s]
+12:31:46.892808 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop__customers.sql [  0.00s]
+12:31:46.893054 [debug]: Finished parsing models/staging/jaffle_shop/stg_jaffle_shop__orders.sql [  0.00s]
+12:31:46.896198 [debug]: Finished parsing models/staging/stripe/stg_stripe__payments.sql [  0.00s]
+12:31:46.896628 [debug]: Finished parsing tests/assert_positive_total_for_payments.sql [  0.00s]
+12:31:46.897053 [debug]: Finished parsing target/generic_tests/source_unique_jaffle_shop_customers_id.sql [  0.00s]
+12:31:46.897309 [debug]: Finished parsing target/generic_tests/source_not_null_jaffle_shop_customers_id.sql [  0.00s]
+12:31:46.897683 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop__customers_customer_id.sql [  0.00s]
+12:31:46.897958 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop__customers_customer_id.sql [  0.00s]
+12:31:46.898211 [debug]: Finished parsing target/generic_tests/relationships_stg_jaffle_shop__69c2006accf24d593d7f144684ebb92c.sql [  0.00s]
+12:31:46.898432 [debug]: Finished parsing target/generic_tests/unique_stg_jaffle_shop__orders_order_id.sql [  0.00s]
+12:31:46.898671 [debug]: Finished parsing target/generic_tests/not_null_stg_jaffle_shop__orders_order_id.sql [  0.00s]
+12:31:46.900765 [debug]: Finished parsing target/generic_tests/accepted_values_stg_jaffle_sho_78d54a82e95cae727dac17c7da96523b.sql [  0.00s]
+12:31:46.901399 [info ]: Finished parsing [  0.03s]
+12:31:46.901641 [info ]: Cached model count updated: 5 models (estimate)
+12:31:46.901648 [info ]: Cached model count updated: 5 models (accurate)
+12:31:46.901790 [info ]: Started scheduling
+12:31:46.902065 [info ]: Finished scheduling [  0.00s]
+12:31:46.902104 [info ]: Started scheduling
+12:31:46.902139 [info ]: Finished scheduling [  0.00s]
+12:31:46.902750 [info ]: Started deferring state
+12:31:46.902767 [info ]: Finished deferring state [  0.00s]
+12:31:46.994567 [info ]: Started building task graph
+12:31:46.994940 [info ]: Finished building task graph [  0.00s]
+12:31:46.995451 [info ]: Started rendering (5 nodes)
+12:31:46.995524 [info ]: Started model jaffle_shop_xf.stg_jaffle_shop__customers
+12:31:46.995572 [debug]: Started rendering model jaffle_shop_xf.stg_jaffle_shop__customers
+12:31:46.995597 [info ]: Started model jaffle_shop_xf.stg_stripe__payments
+12:31:46.995603 [debug]: Started rendering model jaffle_shop_xf.stg_stripe__payments
+12:31:46.995614 [info ]: Started model jaffle_shop_xf.stg_jaffle_shop__orders
+12:31:46.995620 [debug]: Started rendering model jaffle_shop_xf.stg_jaffle_shop__orders
+12:31:46.996820 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop__orders at target/.lsp/compiled/models/staging/jaffle_shop/stg_jaffle_shop__orders.sql
+12:31:46.996822 [debug]: Compiled SQL for node model.jaffle_shop.stg_jaffle_shop__customers at target/.lsp/compiled/models/staging/jaffle_shop/stg_jaffle_shop__customers.sql
+12:31:46.996821 [debug]: Compiled SQL for node model.jaffle_shop.stg_stripe__payments at target/.lsp/compiled/models/staging/stripe/stg_stripe__payments.sql
+12:31:46.996956 [debug]: Finished rendering [  0.00s] model jaffle_shop_xf.stg_jaffle_shop__orders [success]
+12:31:46.996982 [info ]: Started analyzing (5 nodes)
+12:31:46.996987 [debug]: Started analyzing model jaffle_shop_xf.stg_jaffle_shop__orders
+12:31:46.997013 [debug]: Finished rendering [  0.00s] model jaffle_shop_xf.stg_jaffle_shop__customers [success]
+12:31:46.997020 [debug]: Started analyzing model jaffle_shop_xf.stg_jaffle_shop__customers
+12:31:46.997029 [debug]: Finished rendering [  0.00s] model jaffle_shop_xf.stg_stripe__payments [success]
+12:31:46.997036 [debug]: Started analyzing model jaffle_shop_xf.stg_stripe__payments
+12:31:47.011663 [debug]: Schema hydration: registering 0 schemas from db_runner
+12:31:47.011667 [debug]: Schema hydration: registering 0 schemas from db_runner
+12:31:47.011665 [debug]: Schema hydration: registering 0 schemas from db_runner
+12:31:47.035191 [error]: dbt0214: Table 'PAYMENT' does not exist in schema RAW.STRIPE
+  --> models/staging/stripe/stg_stripe__payments.sql:11:6
+12:31:47.035191 [error]: dbt0214: Table 'CUSTOMERS' does not exist in schema RAW.JAFFLE_SHOP
+  --> models/staging/jaffle_shop/stg_jaffle_shop__customers.sql:6:6
+12:31:47.035191 [error]: dbt0214: Table 'ORDERS' does not exist in schema RAW.JAFFLE_SHOP
+  --> models/staging/jaffle_shop/stg_jaffle_shop__orders.sql:7:6
+12:31:47.035359 [info ]:     Failed [  0.04s] model jaffle_shop_xf.stg_stripe__payments (view)
+12:31:47.035390 [debug]: Finished analyzing [  0.04s] model jaffle_shop_xf.stg_stripe__payments [error]
+12:31:47.035456 [info ]:     Failed [  0.04s] model jaffle_shop_xf.stg_jaffle_shop__orders (view)
+12:31:47.035472 [debug]: Finished analyzing [  0.04s] model jaffle_shop_xf.stg_jaffle_shop__orders [error]
+12:31:47.035539 [info ]: Started model jaffle_shop_xf.fct_orders
+12:31:47.035553 [debug]: Started rendering model jaffle_shop_xf.fct_orders
+12:31:47.035565 [debug]: Finished rendering [  0.00s] model jaffle_shop_xf.fct_orders [skipped]
+12:31:47.035576 [debug]: Started analyzing model jaffle_shop_xf.fct_orders
+12:31:47.035586 [info ]:    Skipped [-------] model jaffle_shop_xf.fct_orders (table)
+12:31:47.035596 [debug]: Finished analyzing [  0.00s] model jaffle_shop_xf.fct_orders [skipped]
+12:31:47.035606 [info ]:     Failed [  0.04s] model jaffle_shop_xf.stg_jaffle_shop__customers (view)
+12:31:47.035617 [debug]: Finished analyzing [  0.04s] model jaffle_shop_xf.stg_jaffle_shop__customers [error]
+12:31:47.035641 [info ]: Started model jaffle_shop_xf.dim_customers
+12:31:47.035647 [debug]: Started rendering model jaffle_shop_xf.dim_customers
+12:31:47.035655 [debug]: Finished rendering [  0.00s] model jaffle_shop_xf.dim_customers [skipped]
+12:31:47.035661 [info ]: Finished rendering [  0.04s] (5 nodes, 2 skipped, 0 errors)
+12:31:47.035666 [debug]: Started analyzing model jaffle_shop_xf.dim_customers
+12:31:47.035673 [info ]:    Skipped [-------] model jaffle_shop_xf.dim_customers (table)
+12:31:47.035682 [debug]: Finished analyzing [  0.00s] model jaffle_shop_xf.dim_customers [skipped]
+12:31:47.035687 [info ]: Finished analyzing [  0.04s] (5 nodes, 2 skipped, 3 errors)
+12:31:47.039330 [info ]: Cached model count updated: 5 models (accurate)
+12:31:47.405922 [info ]: Loading ~/.dbt/profiles.yml
