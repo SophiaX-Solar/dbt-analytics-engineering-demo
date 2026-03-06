@@ -13,3 +13,4 @@ logs/
 # python
 __pycache__/
 *.pyc
+dbt_internal_packages/
