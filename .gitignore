@@ -1,0 +1,6 @@
+# dbt
+target/
+logs/
+
+# system
+.DS_Store
